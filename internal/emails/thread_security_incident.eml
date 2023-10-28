@@ -1,0 +1,39 @@
+From: d.martin@nexlink.fr (David Martin – DSI)
+To: cto@nexlink.fr, security@nexlink.fr, rh@nexlink.fr
+CC: p.nicolas@nexlink.fr
+Subject: [URGENT] Alerte sécurité – accès suspect détecté
+Date: Mon, 30 Oct 2023 08:47:12 +0100
+Message-ID: <20231030084712.nexlink.fr>
+
+Bonjour à tous,
+
+Notre système de monitoring a détecté une activité anormale sur les serveurs
+de production dans la nuit du 28 au 29 octobre 2023.
+
+Détails :
+- 47 tentatives de connexion depuis IP 185.220.101.x (réseau Tor)
+- 3 accès réussis avec le compte d.perret@nexlink.fr (compte désactivé depuis mars)
+- Export inhabituel depuis la table "users" à 03:14 UTC (2,1 Mo)
+- Accès au bucket S3 nexlink-prod-backups à 03:22 UTC
+
+Actions immédiates prises :
+1. Réinitialisation de TOUS les tokens JWT et API keys actifs
+2. Blocage IP au niveau firewall
+3. Rotation des credentials AWS et Stripe
+4. Désactivation temporaire de l'accès LDAP externe
+
+Je recommande fortement de :
+- Forcer la réinitialisation des mots de passe pour tous les utilisateurs
+- Activer le 2FA obligatoire pour les comptes admin
+- Auditer les accès des 30 derniers jours
+
+Le fichier "nexlink_backup_20231028.zip" présent sur backup.nexlink.fr
+a peut-être été exfiltré. Je transmets le hash SHA256 pour vérification :
+  SHA256: a7f3c9d2e1b4f8a6c0e2d4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6
+
+Astreinte activée. Je reste joignable.
+
+Cordialement,
+David Martin
+Directeur des Systèmes d'Information – Nexlink
+david.martin@nexlink.fr | +33 6 12 34 56 78

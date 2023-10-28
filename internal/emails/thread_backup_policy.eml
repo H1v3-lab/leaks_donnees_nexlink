@@ -1,0 +1,25 @@
+From: ops@nexlink.fr (Équipe Ops)
+To: dev@nexlink.fr
+Subject: Re: [OPS] Politique de sauvegarde – backup.zip
+Date: Fri, 27 Oct 2023 17:05:00 +0100
+
+Bonjour,
+
+Rappel de la politique de sauvegarde automatisée :
+
+- Sauvegarde complète tous les jours à 03:00 UTC
+- Fichier généré : nexlink_backup_YYYYMMDD.zip
+- Contenu : dump DB complet + fichiers de config + clés SSH
+- Chiffrement : AES-256 (clé dans system_config)
+- Stockage : /opt/backups/ (local) + S3 nexlink-prod-backups
+
+Le dernier backup réussi :
+  /opt/backups/nexlink_backup_20231028.zip
+  Taille : 847 MB
+  MD5 : 9f86d081884c7d659a2feaa0c55ad015
+
+IMPORTANT : Le backup contient les mots de passe en clair dans
+backup/config/production.env – ceci sera corrigé dans le ticket NX-3012.
+
+Ops Team
+ops@nexlink.fr
