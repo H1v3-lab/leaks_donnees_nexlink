@@ -1,0 +1,23 @@
+CONTRAT DE PRESTATION DE SERVICES
+Référence : NX-C-2023-0042
+Confidentiel – Usage interne uniquement
+
+ENTRE :
+  Nexlink SAS, 15 rue de la Innovation, 75008 Paris
+  SIREN: 823456789 | Représentée par P. Garnier, Directeur Général
+
+ET :
+  TechCloud SARL, 42 avenue des Technologies, 69003 Lyon
+  SIREN: 512345678 | Représentée par F. Dupont, Gérant
+
+OBJET : Hébergement infogérance et support niveau 3 pour la plateforme Nexlink
+
+DURÉE : 24 mois à compter du 01/11/2023
+
+VALEUR : 18 500 EUR HT / mois
+
+CLAUSE DE CONFIDENTIALITÉ :
+Les parties s'engagent à ne pas divulguer les informations techniques,
+financières ou organisationnelles échangées dans le cadre du présent contrat.
+
+Signé à Paris, le 25 octobre 2023.

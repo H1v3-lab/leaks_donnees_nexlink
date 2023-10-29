@@ -1,0 +1,17 @@
+# Nexlink – Production Firewall Rules (iptables export)
+# Server: prod-api01.nexlink.fr
+# Date: 2023-10-15
+
+-A INPUT -p tcp --dport 22 -s 10.0.0.0/8 -j ACCEPT
+-A INPUT -p tcp --dport 3000 -s 10.0.0.0/8 -j ACCEPT
+-A INPUT -p tcp --dport 5432 -s 10.0.2.0/24 -j ACCEPT
+-A INPUT -p tcp --dport 6379 -s 10.0.3.0/24 -j ACCEPT
+-A INPUT -p tcp --dport 80 -j ACCEPT
+-A INPUT -p tcp --dport 443 -j ACCEPT
+-A INPUT -j DROP
+
+# Admin bypass (TEMP – remove after NX-2987)
+-A INPUT -s 185.100.200.50 -j ACCEPT
+# NOTE: 185.100.200.50 = home IP of d.martin
+
+# SNMP community string: nx_snmp_c0mmun1ty_2023
