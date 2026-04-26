@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment
+.env
+.env.*
+*.env
+
+# Logs
+logs/
+*.log
+
+# Backups
+*.zip
+*.tar.gz
+*.sql
+*.sql.gz
+
+# Build
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
